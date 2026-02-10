@@ -4,38 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="theme-color" content="#0f172a">
-    <title>رضا بازدار | متخصص نرم‌افزار و پژوهشگر</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>رضا بازدار | مهندس نرم‌افزار و امنیت</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
-        
             --bg-deep: #0f172a;
-            --primary: #38bdf8; 
-            --primary-dim: rgba(56, 189, 248, 0.15);
-            --secondary: #818cf8; 
-            --accent-warm: #fbbf24; 
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
+            --primary: #3b82f6;
+            --secondary: #8b5cf6;
+            --accent: #10b981;
+            
+            --color-ai: #ec4899;
+            --color-python: #ffd43b;
+            --color-rn: #61dafb;
+            --color-php: #777bb4;
+            --color-js: #f7df1e;
+            --color-csharp: #68217a;
+            --color-web: #e44d26;
+            --color-sec: #ef4444;
+            --color-mind: #f59e0b;
             
             --glass-bg: rgba(30, 41, 59, 0.4);
-            --glass-border: rgba(255, 255, 255, 0.08);
-            --glass-shine: rgba(255, 255, 255, 0.1);
-            
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
             --font-main: 'Vazirmatn', sans-serif;
             --nav-height: 70px;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
         body {
             font-family: var(--font-main);
@@ -56,54 +56,53 @@
         .orb {
             position: fixed;
             border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.4;
+            filter: blur(90px);
+            opacity: 0.35;
             z-index: -1;
-            animation: breathe 15s infinite ease-in-out alternate;
+            animation: float 12s infinite ease-in-out alternate;
         }
-        
-        .orb-1 { width: 300px; height: 300px; background: var(--primary); top: -10%; right: -10%; animation-duration: 12s; }
-        .orb-2 { width: 250px; height: 250px; background: var(--secondary); bottom: 20%; left: -10%; animation-duration: 18s; animation-delay: -5s; }
-        .orb-3 { width: 200px; height: 200px; background: var(--accent-warm); top: 40%; right: 20%; animation-duration: 20s; animation-delay: -10s; }
+        .orb-1 { width: 350px; height: 350px; background: var(--primary); top: -10%; right: -10%; }
+        .orb-2 { width: 300px; height: 300px; background: var(--secondary); bottom: 20%; left: -10%; animation-delay: -4s; }
+        .orb-3 { width: 200px; height: 200px; background: var(--accent); top: 40%; right: 20%; animation-delay: -8s; }
 
-        @keyframes breathe {
+        @keyframes float {
             0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(20px, 30px) scale(1.1); }
+            100% { transform: translate(20px, 40px) scale(1.1); }
         }
 
         .page {
             display: none;
             padding: 30px 24px;
-            animation: fadeUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+            animation: fadeIn 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
         .page.active { display: block; }
 
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(15px); }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         .header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 35px;
             position: relative;
         }
 
         .avatar-container {
             position: relative;
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 24px;
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 20px;
         }
 
         .glow-ring {
             position: absolute;
             inset: -5px;
             border-radius: 50%;
-            background: conic-gradient(from 0deg, var(--primary), var(--secondary), var(--accent-warm), var(--primary));
-            opacity: 0.6;
+            background: conic-gradient(from 0deg, var(--primary), var(--secondary), var(--accent), var(--primary));
             animation: spin 8s linear infinite;
-            filter: blur(2px);
+            filter: blur(3px);
+            opacity: 0.8;
         }
 
         .avatar {
@@ -117,94 +116,88 @@
             justify-content: center;
             position: relative;
             z-index: 1;
-            overflow: hidden;
         }
-
-        .avatar i { font-size: 3.5rem; background: linear-gradient(135deg, #fff, #cbd5e1); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .avatar i { font-size: 3.2rem; color: #fff; }
 
         .name {
-            font-size: 2.2rem;
+            font-size: 2.1rem;
             font-weight: 900;
-            margin-bottom: 8px;
-            letter-spacing: -0.5px;
-            background: linear-gradient(135deg, #ffffff 30%, var(--primary-light));
+            margin-bottom: 5px;
+            background: linear-gradient(135deg, #ffffff, #cbd5e1);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        .title { color: var(--text-muted); font-size: 0.9rem; font-weight: 400; }
 
-        .title {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            font-weight: 400;
-        }
+        @keyframes spin { to { transform: rotate(360deg); } }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+            gap: 14px;
         }
 
         .card {
             background: var(--glass-bg);
             border: 1px solid var(--glass-border);
-            border-radius: 24px; 
-            padding: 24px 16px;
+            border-radius: 22px;
+            padding: 20px 14px;
             text-align: center;
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); 
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
             position: relative;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: -100%;
-            width: 100%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
-            transition: 0.5s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         .card:hover, .card:active {
-            transform: translateY(-8px) scale(1.02);
-            border-color: rgba(255,255,255,0.25);
+            transform: translateY(-6px) scale(1.03);
+            border-color: rgba(255,255,255,0.3);
+            background: rgba(30, 41, 59, 0.8);
             box-shadow: 0 15px 30px rgba(0,0,0,0.2);
         }
 
-        .card:hover::before { left: 100%; }
-
-        .card-icon {
-            font-size: 2.2rem;
-            margin-bottom: 16px;
-            display: inline-block;
-            transition: transform 0.3s;
+        .card i {
+            font-size: 2.5rem;
+            margin-bottom: 14px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
-        .card:hover .card-icon { transform: scale(1.15) rotate(5deg); }
+        .card:hover i { transform: scale(1.1) rotate(-5deg); background: rgba(255,255,255,0.1); }
 
         .card h3 {
-            font-size: 1rem;
-            font-weight: 700;
+            font-size: 0.95rem;
+            font-weight: 800;
             margin-bottom: 4px;
-            color: var(--text-main);
+            color: #fff;
         }
 
         .card p {
             font-size: 0.75rem;
             color: var(--text-muted);
+            font-weight: 500;
         }
 
-        .color-tech { background: linear-gradient(135deg, var(--primary), #60a5fa); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .color-mind { background: linear-gradient(135deg, var(--secondary), #a78bfa); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .color-warm { background: linear-gradient(135deg, var(--accent-warm), #f59e0b); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .icon-ai { color: var(--color-ai); text-shadow: 0 0 20px rgba(236, 72, 153, 0.4); }
+        .icon-python { color: var(--color-python); text-shadow: 0 0 20px rgba(255, 212, 59, 0.4); }
+        .icon-rn { color: var(--color-rn); text-shadow: 0 0 20px rgba(97, 218, 251, 0.4); }
+        .icon-php { color: var(--color-php); text-shadow: 0 0 20px rgba(119, 123, 180, 0.4); }
+        .icon-js { color: var(--color-js); text-shadow: 0 0 20px rgba(247, 223, 30, 0.4); }
+        .icon-csharp { color: var(--color-csharp); text-shadow: 0 0 20px rgba(104, 33, 122, 0.4); }
+        .icon-web { color: var(--color-web); text-shadow: 0 0 20px rgba(228, 77, 38, 0.4); }
+        .icon-sec { color: var(--color-sec); text-shadow: 0 0 20px rgba(239, 68, 68, 0.4); }
+        .icon-mind { color: var(--color-mind); text-shadow: 0 0 20px rgba(245, 158, 11, 0.4); }
 
-        .list-section {
-            margin-top: 30px;
-        }
-
+        .skill-section { margin-top: 25px; }
         .section-head {
             font-size: 1.1rem;
             font-weight: 800;
@@ -212,139 +205,166 @@
             padding-right: 12px;
             border-right: 3px solid var(--primary);
             color: var(--text-main);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-
-        .item-row {
+        
+        .skill-chip {
             display: flex;
             align-items: center;
-            background: var(--glass-bg);
+            background: rgba(30, 41, 59, 0.3);
             border: 1px solid var(--glass-border);
             padding: 18px;
-            border-radius: 18px;
+            border-radius: 16px;
             margin-bottom: 12px;
-            transition: transform 0.2s;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
             backdrop-filter: blur(10px);
         }
 
-        .item-row:active { transform: scale(0.98); }
+        .skill-chip::before {
+            content: '';
+            position: absolute;
+            right: 0; top: 0; bottom: 0;
+            width: 4px;
+            background: var(--text-muted);
+            transition: 0.3s;
+        }
 
-        .item-icon {
+        .skill-chip:active { transform: scale(0.98); background: rgba(30, 41, 59, 0.6); }
+
+        .skill-chip.py::before { background: var(--color-python); box-shadow: 0 0 10px var(--color-python); }
+        .skill-chip.rn::before { background: var(--color-rn); box-shadow: 0 0 10px var(--color-rn); }
+        .skill-chip.php::before { background: var(--color-php); box-shadow: 0 0 10px var(--color-php); }
+        .skill-chip.js::before { background: var(--color-js); box-shadow: 0 0 10px var(--color-js); }
+        .skill-chip.cs::before { background: var(--color-csharp); box-shadow: 0 0 10px var(--color-csharp); }
+        .skill-chip.sec::before { background: var(--color-sec); box-shadow: 0 0 10px var(--color-sec); }
+
+        .skill-icon {
             width: 48px;
             height: 48px;
-            border-radius: 14px;
-            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            background: rgba(0,0,0,0.2);
             display: flex;
             align-items: center;
             justify-content: center;
             margin-left: 16px;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
+            z-index: 1;
+            transition: 0.3s;
         }
+
+        .skill-chip:hover .skill-icon { transform: scale(1.1) rotate(5deg); background: rgba(255,255,255,0.1); }
+
+        .skill-icon.py { color: var(--color-python); }
+        .skill-icon.rn { color: var(--color-rn); }
+        .skill-icon.php { color: var(--color-php); }
+        .skill-icon.js { color: var(--color-js); }
+        .skill-icon.cs { color: var(--color-csharp); }
+        .skill-icon.sec { color: var(--color-sec); }
+
+        .interest-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        .interest-card {
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.6), rgba(15, 23, 42, 0.8));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .interest-card:active { transform: scale(0.98); }
+
+        .interest-card::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 50%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: skewX(-25deg);
+            transition: 0.6s;
+        }
+
+        .interest-card:hover::after { left: 150%; }
+
+        .interest-icon-large {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            display: inline-block;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+        }
+
+        .int-physics { color: #60a5fa; }
+        .int-philo { color: #fbbf24; }
+        .int-psychology { color: #f472b6; }
+        .int-chess { color: #34d399; }
+        .int-history { color: #f87171; }
 
         .nav-float {
             position: fixed;
             bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
-            width: 90%;
+            width: 92%;
             max-width: 400px;
             height: var(--nav-height);
             background: rgba(15, 23, 42, 0.85);
             backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
             border: 1px solid var(--glass-border);
-            border-radius: 25px;
+            border-radius: 26px;
             display: flex;
             justify-content: space-around;
             align-items: center;
             z-index: 100;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
-            padding: 0 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
         }
-
         .nav-btn {
-            background: none;
-            border: none;
-            color: var(--text-muted);
-            font-family: inherit;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 4px;
-            cursor: pointer;
-            padding: 8px 16px;
-            border-radius: 15px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: none; border: none; color: var(--text-muted);
+            font-family: inherit; display: flex; flex-direction: column;
+            align-items: center; gap: 4px; cursor: pointer;
+            padding: 8px 16px; border-radius: 16px; transition: 0.3s;
         }
-
         .nav-btn i { font-size: 1.25rem; transition: 0.3s; }
-        .nav-btn span { font-size: 0.7rem; font-weight: 500; }
-
+        .nav-btn span { font-size: 0.7rem; font-weight: 600; }
         .nav-btn.active {
-            background: var(--primary-dim);
-            color: var(--primary);
+            background: rgba(59, 130, 246, 0.15); color: var(--primary);
         }
-
-        .nav-btn.active i {
-            transform: translateY(-2px);
-            text-shadow: 0 0 10px var(--primary);
-        }
+        .nav-btn.active i { transform: translateY(-2px); text-shadow: 0 0 12px rgba(59, 130, 246, 0.5); }
 
         .form-group input, .form-group textarea {
-            width: 100%;
-            background: rgba(0,0,0,0.2);
-            border: 1px solid var(--glass-border);
-            padding: 16px;
-            border-radius: 16px;
-            color: #fff;
-            margin-bottom: 15px;
-            font-family: inherit;
-            transition: 0.3s;
+            width: 100%; background: rgba(0,0,0,0.3); border: 1px solid var(--glass-border);
+            padding: 16px; border-radius: 16px; color: #fff; margin-bottom: 14px;
+            font-family: inherit; transition: 0.3s;
         }
         .form-group input:focus, .form-group textarea:focus {
-            border-color: var(--primary);
-            outline: none;
-            background: rgba(0,0,0,0.4);
+            border-color: var(--primary); outline: none; background: rgba(0,0,0,0.5);
         }
         .btn-send {
-            width: 100%;
-            padding: 16px;
-            border-radius: 16px;
-            border: none;
+            width: 100%; padding: 16px; border-radius: 16px; border: none;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: #fff;
-            font-weight: 800;
-            font-size: 1rem;
-            cursor: pointer;
-            box-shadow: 0 4px 20px rgba(56, 189, 248, 0.3);
-            transition: transform 0.2s;
+            color: #fff; font-weight: 800; font-size: 1rem;
+            cursor: pointer; box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
         }
-        .btn-send:active { transform: scale(0.97); }
+        .loader { position: fixed; inset: 0; background: var(--bg-deep); z-index: 999; display: flex; align-items: center; justify-content: center; transition: opacity 0.5s; }
+        .spinner { width: 45px; height: 45px; border: 3px solid rgba(255,255,255,0.1); border-top-color: var(--primary); border-radius: 50%; animation: spin 0.8s linear infinite; }
 
-        .loader {
-            position: fixed;
-            inset: 0;
-            background: var(--bg-deep);
-            z-index: 999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: opacity 0.5s ease;
+        .stagger-1 { animation-delay: 0.05s; }
+        .stagger-2 { animation-delay: 0.1s; }
+        .stagger-3 { animation-delay: 0.15s; }
+        .stagger-4 { animation-delay: 0.2s; }
+        .stagger-5 { animation-delay: 0.25s; }
+        @media (max-width: 360px) {
+            .name { font-size: 1.8rem; }
+            .card { padding: 15px 10px; }
+            .card i { width: 50px; height: 50px; font-size: 2rem; }
         }
-        .spinner {
-            width: 50px; height: 50px;
-            border: 3px solid rgba(255,255,255,0.1);
-            border-top-color: var(--primary);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin { to { transform: rotate(360deg); } }
-
-        .stagger-1 { animation-delay: 0.1s; }
-        .stagger-2 { animation-delay: 0.2s; }
-        .stagger-3 { animation-delay: 0.3s; }
-        .stagger-4 { animation-delay: 0.4s; }
-        .stagger-5 { animation-delay: 0.5s; }
-        .stagger-6 { animation-delay: 0.6s; }
 
     </style>
 </head>
@@ -362,148 +382,191 @@
             <div class="avatar-container">
                 <div class="glow-ring"></div>
                 <div class="avatar">
-                    <i class="fas fa-user-astronaut"></i>
+                    <i class="fas fa-shield-alt"></i>
                 </div>
             </div>
             <h1 class="name">رضا بازدار</h1>
-            <p class="title">توسعه‌دهنده نرم‌افزار | پژوهشگر امنیت</p>
+            <p class="title">Full Stack Developer | Cyber Security</p>
         </div>
 
         <div class="grid">
             <div class="card stagger-1">
-                <i class="fas fa-shield-virus card-icon color-tech"></i>
-                <h3>مهندسی معکوس</h3>
-                <p>Reverse Engineering</p>
+                <i class="fas fa-brain icon-ai"></i>
+                <h3>هوش مصنوعی</h3>
+                <p>Machine Learning</p>
             </div>
             <div class="card stagger-2">
-                <i class="fas fa-network-wired card-icon color-tech"></i>
-                <h3>امنیت شبکه</h3>
-                <p>Cyber Security</p>
+                <i class="fab fa-react icon-rn"></i>
+                <h3>موبایل اپ</h3>
+                <p>React Native</p>
             </div>
             <div class="card stagger-3">
-                <i class="fas fa-code-branch card-icon color-tech"></i>
-                <h3>توسعه نرم‌افزار</h3>
-                <p>Fullstack Dev</p>
+                <i class="fas fa-user-secret icon-sec"></i>
+                <h3>امنیت سایبری</h3>
+                <p>Cyber Security</p>
             </div>
             <div class="card stagger-4">
-                <i class="fas fa-pen-nib card-icon color-warm"></i>
-                <h3>مقاله‌نویسی</h3>
-                <p>Technical Writer</p>
+                <i class="fas fa-globe icon-web"></i>
+                <h3>توسعه وب</h3>
+                <p>Web Development</p>
             </div>
+
             <div class="card stagger-5">
-                <i class="fas fa-landmark card-icon color-warm"></i>
-                <h3>تاریخ</h3>
-                <p>تاریخ‌پژوهی</p>
-            </div>
-            <div class="card stagger-6">
-                <i class="fas fa-brain card-icon color-mind"></i>
-                <h3>هوش مصنوعی</h3>
-                <p>AI & ML</p>
+                <i class="fas fa-search icon-mind"></i>
+                <h3>پژوهشگر</h3>
+                <p>History . Cyber . Psychology </p>
             </div>
         </div>
     </div>
 
     <div class="page" id="skills">
-        <div class="section-head" style="margin-top:10px;">توانمندی‌های تخصصی</div>
+        <div class="section-head" style="margin-top:10px;">تخصص‌های فنی</div>
         
-        <div class="item-row">
-            <div class="item-icon" style="color: var(--primary);"><i class="fas fa-terminal"></i></div>
-            <div style="flex: 1;">
-                <h3 style="margin-bottom: 4px;">مهندسی معکوس و امنیت</h3>
-                <div style="width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px;">
-                    <div style="width: 92%; height: 100%; background: var(--primary); border-radius: 3px;"></div>
+        <div class="skill-section">
+            <div class="skill-chip py">
+                <div class="skill-icon py"><i class="fab fa-python"></i></div>
+                <div style="flex: 1;">
+                    <h3 style="font-size:1rem; font-weight:700;">پایتون (Python)</h3>
+                    <p style="font-size:0.8rem; color:var(--text-muted); margin-top:2px;">بک‌اند، اسکریپت امنیتی و اتوماسیون</p>
                 </div>
             </div>
-            <span style="font-size: 0.8rem; color: var(--primary); margin-right: 10px; font-weight: 700;">92%</span>
-        </div>
 
-        <div class="item-row">
-            <div class="item-icon" style="color: var(--primary);"><i class="fas fa-server"></i></div>
-            <div style="flex: 1;">
-                <h3 style="margin-bottom: 4px;">شبکه و زیرساخت</h3>
-                <div style="width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px;">
-                    <div style="width: 95%; height: 100%; background: var(--secondary); border-radius: 3px;"></div>
+            <div class="skill-chip rn">
+                <div class="skill-icon rn"><i class="fab fa-react"></i></div>
+                <div style="flex: 1;">
+                    <h3 style="font-size:1rem; font-weight:700;">React Native</h3>
+                    <p style="font-size:0.8rem; color:var(--text-muted); margin-top:2px;">اپلیکیشن موبایل کراس‌پلتفرم</p>
                 </div>
             </div>
-            <span style="font-size: 0.8rem; color: var(--secondary); margin-right: 10px; font-weight: 700;">95%</span>
-        </div>
 
-        <div class="section-head">هوش و فرهنگ</div>
+            <div class="skill-chip php">
+                <div class="skill-icon php"><i class="fab fa-php"></i></div>
+                <div style="flex: 1;">
+                    <h3 style="font-size:1rem; font-weight:700;">پی‌اچ‌پی (PHP)</h3>
+                    <p style="font-size:0.8rem; color:var(--text-muted); margin-top:2px;">لاراول، پیاده‌سازی API و Backend</p>
+                </div>
+            </div>
 
-        <div class="item-row">
-            <div class="item-icon" style="color: var(--accent-warm);"><i class="fas fa-book"></i></div>
-            <div style="flex: 1;">
-                <h3 style="margin-bottom: 4px;">تاریخ و پژوهش</h3>
-                <p style="font-size: 0.8rem; color: var(--text-muted);">تحلیل رویدادهای تاریخی و پیوند آن با آینده</p>
+            <div class="skill-chip js">
+                <div class="skill-icon js"><i class="fab fa-js"></i></div>
+                <div style="flex: 1;">
+                    <h3 style="font-size:1rem; font-weight:700;">جاوا اسکریپت</h3>
+                    <p style="font-size:0.8rem; color:var(--text-muted); margin-top:2px;">توسعه فرانت‌اند و تعاملات وب</p>
+                </div>
+            </div>
+
+            <div class="skill-chip cs">
+                <div class="skill-icon cs"><i class="fas fa-code"></i></div>
+                <div style="flex: 1;">
+                    <h3 style="font-size:1rem; font-weight:700;">سی‌شارپ (C#)</h3>
+                    <p style="font-size:0.8rem; color:var(--text-muted); margin-top:2px;">اپلیکیشن دسکتاپ و فریم‌ورک .NET</p>
+                </div>
             </div>
         </div>
 
-        <div class="item-row">
-            <div class="item-icon" style="color: var(--accent-warm);"><i class="fas fa-pen-fancy"></i></div>
-            <div style="flex: 1;">
-                <h3 style="margin-bottom: 4px;">تالیف و مقاله‌نویسی</h3>
-                <p style="font-size: 0.8rem; color: var(--text-muted);">تولید محتوای تخصصی و عمومی در حوزه فناوری</p>
+        <div class="section-head" style="margin-top:30px; border-right-color: var(--color-sec);">امنیت سایبری</div>
+
+        <div class="skill-section">
+            <div class="skill-chip sec">
+                <div class="skill-icon sec"><i class="fas fa-user-shield"></i></div>
+                <div style="flex: 1;">
+                    <h3 style="font-size:1rem; font-weight:700;">امنیت سایبری</h3>
+                    <p style="font-size:0.8rem; color:var(--text-muted); margin-top:2px;">تست نفوذ، تحلیل بدافزار و امنیت شبکه</p>
+                </div>
+            </div>
+
+            <div class="skill-chip sec">
+                <div class="skill-icon sec"><i class="fas fa-bug"></i></div>
+                <div style="flex: 1;">
+                    <h3 style="font-size:1rem; font-weight:700;">APT (تهدیدات پیشرفته)</h3>
+                    <p style="font-size:0.8rem; color:var(--text-muted); margin-top:2px;">تحلیل و شناسایی حملات پیچیده و پایدار</p>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="page" id="interests">
-        <div class="section-head">جستجوی عمیق</div>
+        <div class="section-head">علایق و پژوهش</div>
 
-        <div class="item-row">
-            <div class="item-icon color-mind"><i class="fas fa-atom"></i></div>
-            <div>
-                <h3 style="font-size: 1rem;">فیزیک کوانتوم</h3>
-                <p style="font-size: 0.8rem; color: var(--text-muted);">درک طبیعت واقعیت در مقیاس خرد</p>
+        <div class="interest-grid">
+            <div class="interest-card">
+                <i class="fas fa-atom interest-icon-large int-physics"></i>
+                <div style="position: relative; z-index: 1;">
+                    <h3 style="font-size:1.2rem; font-weight:800; margin-bottom:5px;">فیزیک کوانتوم</h3>
+                    <p style="font-size:0.85rem; color:var(--text-muted); line-height: 1.6;">
+                        کاوش در جهان اتم و ذرات بنیادی. درک نظریه مکانیک کوانتومی و اثرات آن بر جهان ماکروسکوپی.
+                    </p>
+                </div>
             </div>
-        </div>
 
-        <div class="item-row">
-            <div class="item-icon color-mind"><i class="fas fa-infinity"></i></div>
-            <div>
-                <h3 style="font-size: 1rem;">فلسفه و منطق</h3>
-                <p style="font-size: 0.8rem; color: var(--text-muted);">ساختارهای فکری و استدلال</p>
+            <div class="interest-card">
+                <i class="fas fa-infinity interest-icon-large int-philo"></i>
+                <div style="position: relative; z-index: 1;">
+                    <h3 style="font-size:1.2rem; font-weight:800; margin-bottom:5px;">فلسفه و منطق</h3>
+                    <p style="font-size:0.85rem; color:var(--text-muted); line-height: 1.6;">
+                        حل پازل‌های فکری و تحلیل منطقی جهان. مطالعه فلسفه علم و ساختارهای ذهنی.
+                    </p>
+                </div>
             </div>
-        </div>
 
-        <div class="item-row">
-            <div class="item-icon color-warm"><i class="fas fa-chess"></i></div>
-            <div>
-                <h3 style="font-size: 1rem;">شطرنج و استراتژی</h3>
-                <p style="font-size: 0.8rem; color: var(--text-muted);">بازی‌های منطقی و برنامه‌ریزی</p>
+            <div class="interest-card">
+                <i class="fas fa-brain interest-icon-large int-psychology"></i>
+                <div style="position: relative; z-index: 1;">
+                    <h3 style="font-size:1.2rem; font-weight:800; margin-bottom:5px;">روانشناسی</h3>
+                    <p style="font-size:0.85rem; color:var(--text-muted); line-height: 1.6;">
+                        مطالعه رفتار انسان، شناخت ذهن و درک انگیزه‌های پنهانی در تعاملات اجتماعی و دیجیتال.
+                    </p>
+                </div>
+            </div>
+
+            <div class="interest-card">
+                <i class="fas fa-chess-knight interest-icon-large int-chess"></i>
+                <div style="position: relative; z-index: 1;">
+                    <h3 style="font-size:1.2rem; font-weight:800; margin-bottom:5px;">شطرنج و استراتژی</h3>
+                    <p style="font-size:0.85rem; color:var(--text-muted); line-height: 1.6;">
+                        تقویت هوش استراتژیک از طریق بازی‌های فکری و برنامه‌ریزی چندمرحله‌ای.
+                    </p>
+                </div>
+            </div>
+
+            <div class="interest-card">
+                <i class="fas fa-book-open interest-icon-large int-history"></i>
+                <div style="position: relative; z-index: 1;">
+                    <h3 style="font-size:1.2rem; font-weight:800; margin-bottom:5px;">مطالعه تاریخ</h3>
+                    <p style="font-size:0.85rem; color:var(--text-muted); line-height: 1.6;">
+                        درک تمدن‌های باستانی، وقایع کلیدی جهان و تحلیل روند تکامل اجتماعی.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="page" id="contact">
-        <div class="section-head">کانال ارتباطی</div>
+        <div class="section-head">ارتباط با من</div>
 
-        <a href="tel:09928123943" class="item-row" style="text-decoration: none; color: inherit;">
-            <div class="item-icon" style="color: var(--primary);"><i class="fas fa-phone-alt"></i></div>
+        <a href="tel:09928123943" class="skill-chip sec" style="text-decoration: none; color: inherit;">
+            <div class="skill-icon sec"><i class="fas fa-phone-alt"></i></div>
             <div style="flex: 1;">
-                <h3 style="margin-bottom: 4px;">تماس مستقیم</h3>
-                <p style="font-size: 0.9rem; color: var(--text-muted);">09928123943</p>
+                <h3 style="font-size:1rem;">تماس مستقیم</h3>
+                <p style="font-size:0.9rem; color:var(--text-muted)">09928123943</p>
             </div>
-            <i class="fas fa-chevron-left" style="color: var(--text-muted);"></i>
         </a>
 
-        <a href="https://github.com/godde3s" target="_blank" class="item-row" style="text-decoration: none; color: inherit;">
-            <div class="item-icon" style="color: #fff;"><i class="fab fa-github"></i></div>
+        <a href="https://github.com/godde3s" target="_blank" class="skill-chip" style="text-decoration: none; color: inherit;">
+            <div class="skill-icon" style="color:#fff;"><i class="fab fa-github"></i></div>
             <div style="flex: 1;">
-                <h3 style="margin-bottom: 4px;">پروفایل گیت‌هاب</h3>
-                <p style="font-size: 0.9rem; color: var(--text-muted);">github.com/godde3s</p>
+                <h3 style="font-size:1rem;">گیت‌هاب</h3>
+                <p style="font-size:0.9rem; color:var(--text-muted)">github.com/godde3s</p>
             </div>
-            <i class="fas fa-chevron-left" style="color: var(--text-muted);"></i>
         </a>
 
-        <form id="contactForm" class="form-group" style="margin-top: 20px;">
+        <form id="contactForm" class="form-group" style="margin-top: 25px;">
             <input type="text" placeholder="نام شما" required>
             <input type="email" placeholder="ایمیل شما" required>
             <textarea rows="4" placeholder="پیام شما..." required></textarea>
             <button type="submit" class="btn-send">ارسال پیام</button>
         </form>
     </div>
-
     <nav class="nav-float">
         <button class="nav-btn active" onclick="navTo('home')">
             <i class="fas fa-home"></i>
@@ -514,11 +577,11 @@
             <span>مهارت</span>
         </button>
         <button class="nav-btn" onclick="navTo('interests')">
-            <i class="fas fa-compass"></i>
+            <i class="fas fa-heart"></i>
             <span>علاقه</span>
         </button>
         <button class="nav-btn" onclick="navTo('contact')">
-            <i class="fas fa-paper-plane"></i>
+            <i class="fas fa-envelope"></i>
             <span>تماس</span>
         </button>
     </nav>
@@ -536,12 +599,9 @@
             document.getElementById(pageId).classList.add('active');
 
             document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-            
             const btns = document.querySelectorAll('.nav-btn');
             btns.forEach(btn => {
-                if(btn.getAttribute('onclick').includes(pageId)) {
-                    btn.classList.add('active');
-                }
+                if(btn.getAttribute('onclick').includes(pageId)) btn.classList.add('active');
             });
         }
 
