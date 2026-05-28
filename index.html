@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>reza b Azdar </title>
+    <title>reza b Azdar</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -550,44 +550,177 @@
             color: #fff;
         }
 
-        @media (max-width: 640px) {
+        /* =========================================
+           RESPONSIVE STYLES (UPDATED)
+           ========================================= */
+        
+        /* Tablet & Small Desktops */
+        @media (max-width: 768px) {
             .container {
                 padding: 60px 20px 140px;
             }
+            
+            header {
+                margin-bottom: 60px;
+            }
 
             h1 {
+                font-size: 2.2rem;
+            }
+
+            .research-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Mobile Devices */
+        @media (max-width: 480px) {
+            .container {
+                padding: 40px 16px 120px;
+            }
+
+            header {
+                margin-bottom: 40px;
+            }
+
+            .avatar {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 24px;
+            }
+
+            .avatar-inner {
                 font-size: 2rem;
             }
 
+            h1 {
+                font-size: 1.8rem;
+                margin-bottom: 12px;
+            }
+
+            .subtitle {
+                gap: 8px;
+            }
+
+            .tag {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
+
             .card {
-                padding: 24px;
+                padding: 20px;
+                border-radius: 20px;
             }
 
             .card-icon {
-                width: 48px;
-                height: 48px;
+                width: 44px;
+                height: 44px;
+                font-size: 1.2rem;
+                margin-bottom: 16px;
+            }
+
+            .card h3 {
+                font-size: 1.1rem;
+            }
+
+            .card p {
+                font-size: 0.9rem;
+            }
+
+            .section-title {
                 font-size: 1.3rem;
+                margin-bottom: 24px;
+            }
+
+            .tabs {
+                gap: 4px;
+                padding: 4px;
+            }
+
+            .tab-btn {
+                padding: 10px 8px;
+                font-size: 0.8rem;
+            }
+
+            .skill-name {
+                font-size: 0.85rem;
+            }
+
+            .skill-percent {
+                font-size: 0.8rem;
+            }
+
+            .chip-label {
+                margin: 20px 0 12px;
+                padding: 10px 16px;
+                font-size: 0.9rem;
+            }
+
+            .chip {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+                gap: 6px;
+            }
+
+            .research-card {
+                padding: 20px;
             }
 
             .contact-card {
-                padding: 20px;
+                padding: 16px;
                 gap: 16px;
             }
 
             .contact-icon {
-                width: 48px;
-                height: 48px;
-                font-size: 1.2rem;
+                width: 44px;
+                height: 44px;
+                font-size: 1.1rem;
+                border-radius: 12px;
+            }
+
+            .contact-label {
+                font-size: 0.8rem;
             }
 
             .contact-value {
-                font-size: 1rem;
+                font-size: 0.95rem;
+            }
+
+            .contact-arrow {
+                display: none;
+            }
+
+            .nav {
+                bottom: 20px;
+                padding: 6px;
+                gap: 6px;
+                width: calc(100% - 32px);
+                max-width: 320px;
+                justify-content: space-around;
             }
 
             .nav-btn {
-                width: 48px;
-                height: 48px;
-                font-size: 1.1rem;
+                width: 44px;
+                height: 44px;
+                font-size: 1rem;
+                border-radius: 12px;
+            }
+        }
+
+        /* Very Small Screens */
+        @media (max-width: 360px) {
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            .tag {
+                font-size: 0.75rem;
+                padding: 5px 10px;
+            }
+
+            .tab-btn {
+                font-size: 0.75rem;
+                padding: 8px 4px;
             }
         }
     </style>
